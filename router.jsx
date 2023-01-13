@@ -10,30 +10,35 @@ import Signup from "./pages/Signup"
 
 const routes = [
 
-    // {
-    //     path:'/',
-    //     element: <UserLayout />,
-    // //     children:[
+    {
+        name: "user",
+        path:'/',
+        element: <UserLayout />,
+        children:[
 
-    // //         {
-    // //             path:'/dashboard',
-    // //             element: <Dashboard />
-    // //         },
-    // //         {
-    // //             path:'/users',
-    // //             element: <Users />
-    // //         },
-    // //         {
-    // //             path:'/users/new',
-    // //             element: <UserForm key='userCreate' />
-    // //         },
-    // //         {
-    // //             path:'/users/:id',
-    // //             element: <UserForm key='userUpdate' />
-    // //         },
+            {   
+                name: 'dashboard',
+                path:'/dashboard',
+                element: <Dashboard />
+            },
+            {
+                name: 'users',
+                path:'/users',
+                element: <Users />
+            },
+            {
+                name: 'new user',
+                path:'/users/new',
+                element: <UserForm key='userCreate' />
+            },
+            {   
+                name: 'user',
+                path:'/users/:id',
+                element: <UserForm key='userUpdate' />
+            },
 
-    // //     ]
-    // },
+        ],
+    },
     {   
         name: 'public',
         path:'/',
@@ -45,7 +50,8 @@ const routes = [
                 path:'/',
                 element: <Main />
             },
-            // {   
+            // {    
+                   name: 'login',
             //     path:'/login',
             //     element: <LoginView />
             // },
